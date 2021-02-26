@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<servlets>
+    <servlets  >
+        <path>/myweb/regUser</path>
+        <classname>com.webserver.servlet.RegServlet</classname>
+    </servlets>
+    <servlets>
+        <path>/myweb/loginUser</path>
+        <classname>com.webserver.servlet.LoginServlet</classname>
+    </servlets>
+    <servlets>
+        <path>/myweb/showAllUser</path>
+        <classname>com.webserver.servlet.ShowAllUserServlet</classname>
+    </servlets>
+    <servlets>
+        <path>/myweb/toupdata</path>
+        <classname>com.webserver.servlet.ToUpDataServlet</classname>
+    </servlets>
+</servlets>

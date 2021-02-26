@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http：//www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+    <center>
+        <h1>用户列表</h1>
+        <table border="1">
+            <tr>
+                <td>用户名</td>
+                <td>密码</td>
+                <td>昵称</td>
+                <td>邮箱</td>
+                <td>年龄</td>
+                <td>操作</td>
+            </tr>
+            <tr th:each="user:${list}">
+                <td th:text="${user.username}">fanchuanqi</td><!--th:text="",用于-->
+                <td th:text="${user.password}">123456</td>
+                <td th:text="${user.nickname}">fancq</td>
+                <td th:text="${user.email}">45646564@qq.com</td>
+                <td th:text="${user.age}">22</td>
+                <!--th:href="",用于生成超链接内容为网址./toupdata?username=用户名-->
+                <td ><a href="#" th:href="@{'./toupdata?username='+${user.username}}">修改信息</a></td>
+            </tr>
+            <tr th:remove="all"><!--th:remove="all",生成动态页面时这个标签及其子标签全忽略-->
+                <td>张三</td>
+                <td>123456</td>
+                <td>阿三</td>
+                <td>4576453313@qq.com</td>
+                <td>22</td>
+                <td><a href="#">修改信息</a></td>
+            </tr>
+            <tr>
+                <td align="center" colspan="6">
+                    <a href="/myweb/index.html">返回</a>
+                </td>
+            </tr>
+         </table>
+    </center>
+</body>
+</html>

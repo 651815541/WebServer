@@ -46,51 +46,30 @@
                     </td>
                 </tr>
             </table>
+            <img src="图片路径" width=“图片宽” height=“图片高”>标签用来显示一张图片。
+            其中src用来指示图片路径，可以指定绝对路径或相对路径。
+            需要注意，在页面上无论那个标签中只要是指定相对路径，那么“./”当前目录指的就是当前页面所在的目录。
+            例如：
+            <img src= "./logo.png">
+            浏览器如何理解上面的“./logo.png”的实际路径是什么，取决于浏览器地址栏上面请求当前页面时当前页面所在目录。
+            请求当前页面时，浏览器上的路径为：http://localhost:8088/myweb/index.html
+            那么浏览器在这个页面中看到的所有相对路径中的“./”对应的位置都是：
+            http://localhost:8088/myweb/
+            因此，上面图片的实际路径为：
+            http://localhost:8088/myweb/logo.html
     -->
     <center>
         <h1>标题</h1>
         <input type="text" size = "32">
         <input type="button"value="百度一下"onclick="alert('点你妹啊')"><br>
-        <a href="http://www.taobao.com"style="text-decoration: none">去淘宝</a>
-    </center>
-    <center>
-        <div>
-            <h2>欢迎注册</h2>
-            <table >
-                <tr>
-                    <td>用户名：</td>
-                    <td><input type="text" style="border-radius: 5px"></td>
-                </tr>
-                <tr>
-                    <td>密码：</td>
-                    <td><input type="password"style="border-radius: 5px"></td>
-                </tr>
-                <tr>
-                    <td>昵称：</td>
-                    <td><input type="text"style="border-radius: 5px"></td>
-                </tr>
-                <tr>
-                    <td>邮箱：</td>
-                    <td><input type="email"style="border-radius: 5px"></td>
-                </tr>
-                <tr>
-                    <td>年龄：</td>
-                    <td><input type="text"style="border-radius: 5px"></td>
-                </tr>
-                <tr>
-                    <td align="center" colspan="2">
-                        <input type="button"value="注册"style="border-radius: 5px"onclick="alert('注册成功')">
-                    </td>
-                </tr>
-            </table>
+        <a href="http://www.taobao.com"style="text-decoration: none">去淘宝</a><br>
+        <a href="./reg.html">注册</a>
+        <a href="./login.html">登录</a><br>
+        <img src="./BDlogo.gif"><br>
+        <img src="./logo.png"><br>
+        <a href="./showAllUser">用户列表</a><br>
 
-            用户名：<input type="text" style="border-radius: 5px"><br>
-            密码：<input type="password"style="border-radius: 5px"><br>
-            昵称：<input type="text"style="border-radius: 5px"><br>
-            邮箱：<input type="email"style="border-radius: 5px"><br>
-            年龄：<input type="text"style="border-radius: 5px"><br>
-            <input type="button"value="注册"style="border-radius: 5px"onclick="alert('注册成功')">
-        </div>
     </center>
+
 </body>
 </html>
